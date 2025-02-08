@@ -1,0 +1,75 @@
+---
+title: <center>**Comparing IVV/QQQ ETFs**</center> 
+date: <center> <font size="+2">**`r format(Sys.Date(),'%d %B,%Y')`**</font> </center>
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+source("/home/jdrk/Documents/ETFs/ETFs.R")
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+qq_iv_gt
+```
+---
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=9,fig.height=4}
+ivv_qqq_cht
+```
+
+<center><font size="+2">**QQQ / IVV ETFs Sectors**</font></center>
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=9,fig.height=4}
+ivv_qqq_cht_bar
+```
+
+<center><font size="+2">-----------------------------------------------------------------------------</font></center>
+ 
+<center><font size="+2">**IVV ETF Top5 Stock By Sectors.**</font></center>
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_info
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_fin
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_con_disc
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_hcare
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_comn
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,fig.align='center',fig.width=8,fig.height=3.5}
+ivv_ind
+```
+
+ <center><font size="+2">-----------------------------------------------------------------------------</font></center>
+ 
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+QQQ_top_gt
+```
+
+
+ <center><font size="+2">-----------------------------------------------------------------------------</font></center>
+
+```{r echo=FALSE,warning=FALSE,message=FALSE}
+main_vals
+```
+

@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title> Comparing IVV/QQQ ETFs </title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><center><br />
+<strong>Comparing IVV/QQQ ETFs</strong><br />
+</center></h1>
+<h4 class="date"><center><br />
+<font size="+2"><strong>08 February,2025</strong></font><br />
+</center></h4>
+
+</div>
+
+
+<div id="rdqkqeucjw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rdqkqeucjw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rdqkqeucjw thead, #rdqkqeucjw tbody, #rdqkqeucjw tfoot, #rdqkqeucjw tr, #rdqkqeucjw td, #rdqkqeucjw th {
+  border-style: none;
+}
+
+#rdqkqeucjw p {
+  margin: 0;
+  padding: 0;
+}
+
+#rdqkqeucjw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rdqkqeucjw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#rdqkqeucjw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#rdqkqeucjw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rdqkqeucjw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rdqkqeucjw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rdqkqeucjw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rdqkqeucjw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rdqkqeucjw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rdqkqeucjw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rdqkqeucjw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#rdqkqeucjw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rdqkqeucjw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rdqkqeucjw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rdqkqeucjw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rdqkqeucjw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rdqkqeucjw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rdqkqeucjw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rdqkqeucjw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rdqkqeucjw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rdqkqeucjw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rdqkqeucjw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#rdqkqeucjw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rdqkqeucjw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rdqkqeucjw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rdqkqeucjw .gt_left {
+  text-align: left;
+}
+
+#rdqkqeucjw .gt_center {
+  text-align: center;
+}
+
+#rdqkqeucjw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rdqkqeucjw .gt_font_normal {
+  font-weight: normal;
+}
+
+#rdqkqeucjw .gt_font_bold {
+  font-weight: bold;
+}
+
+#rdqkqeucjw .gt_font_italic {
+  font-style: italic;
+}
+
+#rdqkqeucjw .gt_super {
+  font-size: 65%;
+}
+
+#rdqkqeucjw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rdqkqeucjw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rdqkqeucjw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rdqkqeucjw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rdqkqeucjw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rdqkqeucjw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rdqkqeucjw .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#rdqkqeucjw .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#rdqkqeucjw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+    <col style="width:90px;"/>
+  </colgroup>
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="9" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="background-color: #2E3436; color: #FFFFFF; font-size: 16; text-align: center; font-weight: bold;">Comparing IVV / QQQ US. ETFs</td>
+    </tr>
+    
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="background-color: #D3D7CF; color: #D3D7CF;" scope="col" id="YEARS">YEARS</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" style="color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;" scope="colgroup" id="IVV">
+        <div class="gt_column_spanner">IVV</div>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" style="color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;" scope="colgroup" id="QQQ">
+        <div class="gt_column_spanner">QQQ</div>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #032A61;" scope="col" id="P.LOWI">P.LOWI</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #032A61;" scope="col" id="HIGH">HIGH</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #032A61;" scope="col" id="PROFIT">PROFIT</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #032A61;" scope="col" id="PCTI">PCTI</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #CC0000;" scope="col" id="P.LOWQ">P.LOWQ</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #CC0000;" scope="col" id="High">High</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #CC0000;" scope="col" id="Profit">Profit</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #FFFFFF; font-size: 8; text-align: center; font-weight: bold; background-color: #CC0000;" scope="col" id="PCTQ">PCTQ</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2025</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">463.23</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">612.70</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">149.47</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">32.27%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">393.94</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">532.64</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">138.70</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">35.21%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2024</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">370.07</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">608.69</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">238.63</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">64.48%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">258.25</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">537.30</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">279.05</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">108.06%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2023</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">346.09</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">472.55</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">126.45</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">36.54%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">256.56</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">409.07</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">152.51</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">59.44%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2022</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">349.16</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">458.57</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">109.41</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">31.34%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">292.55</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">393.67</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">101.12</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">34.57%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2021</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">207.82</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">458.27</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">250.46</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">120.52%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">164.19</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">395.43</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">231.24</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">140.83%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2020</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">222.23</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">354.03</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">131.81</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">59.31%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">144.11</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">306.01</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">161.89</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">112.34%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2019</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">213.49</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">300.02</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">86.53</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">40.53%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">138.03</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">207.34</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">69.31</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">50.21%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2018</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">197.30</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">264.83</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">67.53</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">34.23%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">112.99</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">178.79</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">65.80</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">58.23%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2017</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">157.60</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">239.73</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">82.12</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">52.11%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">90.04</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">151.32</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">61.28</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">68.05%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2016</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">159.46</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">198.31</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">38.85</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">24.36%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">91.19</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">114.20</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">23.01</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">25.23%</td></tr>
+    <tr><td headers="YEARS" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #555753; border-right-width: 1px; border-right-style: dotted; border-right-color: #555753; border-top-width: 1px; border-top-style: dotted; border-top-color: #555753; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #555753; color: #000000; text-align: center; font-weight: bold; background-color: #D3D7CF;">2015</td>
+<td headers="P.LOWI" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">0.00</td>
+<td headers="HIGH" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">181.13</td>
+<td headers="PROFIT" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">181.13</td>
+<td headers="PCTI" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: solid; border-left-color: #000000; border-right-width: 1px; border-right-style: solid; border-right-color: #000000; border-top-width: 1px; border-top-style: solid; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">0.00%</td>
+<td headers="P.LOWQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">0.00</td>
+<td headers="High" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">107.33</td>
+<td headers="Profit" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">107.33</td>
+<td headers="PCTQ" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; color: #000000; text-align: center; font-weight: bold;">0.00%</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" style="background-color: #2E3436; color: #FFFFFF; font-weight: bold;" colspan="9"> iShares Core S&amp;P 500 ETF (IVV) - Net Assets: 585.74B</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" style="background-color: #2E3436; color: #FFFFFF; font-weight: bold;" colspan="9"> Invesco QQQ Trust (QQQ) - Net Assets: 318.91B</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+<hr />
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="864" style="display: block; margin: auto;" /></p>
+<center>
+<font size="+2"><strong>QQQ / IVV ETFs Sectors</strong></font>
+</center>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="864" style="display: block; margin: auto;" /></p>
+<center>
+<font size="+2">—————————————————————————–</font>
+</center>
+<center>
+<font size="+2"><strong>IVV ETF Top5 Stock By Sectors.</strong></font>
+</center>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" /></p>
+<center>
+<font size="+2">—————————————————————————–</font>
+</center>
+<div id="piecrngztg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#piecrngztg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#piecrngztg thead, #piecrngztg tbody, #piecrngztg tfoot, #piecrngztg tr, #piecrngztg td, #piecrngztg th {
+  border-style: none;
+}
+
+#piecrngztg p {
+  margin: 0;
+  padding: 0;
+}
+
+#piecrngztg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#piecrngztg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#piecrngztg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#piecrngztg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#piecrngztg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#piecrngztg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#piecrngztg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#piecrngztg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#piecrngztg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#piecrngztg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#piecrngztg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#piecrngztg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#piecrngztg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#piecrngztg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#piecrngztg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#piecrngztg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#piecrngztg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#piecrngztg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#piecrngztg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#piecrngztg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#piecrngztg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#piecrngztg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#piecrngztg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#piecrngztg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#piecrngztg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#piecrngztg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#piecrngztg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#piecrngztg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#piecrngztg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#piecrngztg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#piecrngztg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#piecrngztg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#piecrngztg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#piecrngztg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#piecrngztg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#piecrngztg .gt_left {
+  text-align: left;
+}
+
+#piecrngztg .gt_center {
+  text-align: center;
+}
+
+#piecrngztg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#piecrngztg .gt_font_normal {
+  font-weight: normal;
+}
+
+#piecrngztg .gt_font_bold {
+  font-weight: bold;
+}
+
+#piecrngztg .gt_font_italic {
+  font-style: italic;
+}
+
+#piecrngztg .gt_super {
+  font-size: 65%;
+}
+
+#piecrngztg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#piecrngztg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#piecrngztg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#piecrngztg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#piecrngztg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#piecrngztg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#piecrngztg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#piecrngztg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#piecrngztg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col style="width:120px;"/>
+    <col style="width:120px;"/>
+    <col style="width:120px;"/>
+    <col style="width:120px;"/>
+    <col style="width:120px;"/>
+  </colgroup>
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="background-color: #BEBEBE; color: #000000; text-align: center; font-weight: bold;">Top QQQ Information Tech 15 Stocks.</td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="background-color: #032A61; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="NAME">NAME</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="background-color: #032A61; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="STOCK">STOCK</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="background-color: #032A61; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="PRICE">PRICE</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #032A61; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="WEIGHT">WEIGHT</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #032A61; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="SHARES_PVAL">SHARES_PVAL</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Apple Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">AAPL</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">228</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">8.80%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">125,229,547</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Microsoft Corp</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">MSFT</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">410</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">7.70%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">61,595,452</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">NVIDIA Corp</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">NVDA</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">130</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">7.66%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">202,891,494</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Broadcom Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">AVGO</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">225</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">4.49%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">63,996,683</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Cisco Systems Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">CSCO</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">62</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.54%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">81,178,076</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Palantir Technologies Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">PLTR</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">111</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.36%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">44,446,699</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">QUALCOMM Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">QCOM</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">168</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.20%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">22,644,745</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Adobe Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">ADBE</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">433</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.19%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">8,972,318</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Advanced Micro Devices Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">AMD</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">108</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.12%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">33,076,596</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Texas Instruments Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">TXN</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">180</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.02%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">18,593,060</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Intuit Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">INTU</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">579</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">1.01%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">5,705,391</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Applied Materials Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">AMAT</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">180</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">0.92%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">16,803,256</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Palo Alto Networks Inc</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">PANW</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">194</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">0.76%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">13,374,820</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">AppLovin Corp</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">APP</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">376</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">0.68%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">6,087,473</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">Lam Research Corp</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">LRCX</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">82</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">0.65%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000;">26,225,322</td></tr>
+    <tr><td headers="NAME" class="gt_row gt_left" style="text-align: center; font-weight: bold; color: #FFFFFF; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; background-color: #000000;">Total</td>
+<td headers="STOCK" class="gt_row gt_left" style="text-align: center; font-weight: bold; color: #FFFFFF; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; background-color: #000000;">-</td>
+<td headers="PRICE" class="gt_row gt_right" style="text-align: center; font-weight: bold; color: #FFFFFF; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; background-color: #000000;">-</td>
+<td headers="WEIGHT" class="gt_row gt_center" style="text-align: center; font-weight: bold; color: #FFFFFF; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; background-color: #000000;">40.10%</td>
+<td headers="SHARES_PVAL" class="gt_row gt_center" style="text-align: center; font-weight: bold; color: #FFFFFF; border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; background-color: #000000;">730,820,932</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<center>
+<font size="+2">—————————————————————————–</font>
+</center>
+<div id="uprzqiifub" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uprzqiifub table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#uprzqiifub thead, #uprzqiifub tbody, #uprzqiifub tfoot, #uprzqiifub tr, #uprzqiifub td, #uprzqiifub th {
+  border-style: none;
+}
+
+#uprzqiifub p {
+  margin: 0;
+  padding: 0;
+}
+
+#uprzqiifub .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uprzqiifub .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uprzqiifub .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uprzqiifub .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uprzqiifub .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uprzqiifub .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uprzqiifub .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uprzqiifub .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uprzqiifub .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#uprzqiifub .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uprzqiifub .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uprzqiifub .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uprzqiifub .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uprzqiifub .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uprzqiifub .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uprzqiifub .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uprzqiifub .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uprzqiifub .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#uprzqiifub .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uprzqiifub .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uprzqiifub .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uprzqiifub .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uprzqiifub .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uprzqiifub .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uprzqiifub .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uprzqiifub .gt_left {
+  text-align: left;
+}
+
+#uprzqiifub .gt_center {
+  text-align: center;
+}
+
+#uprzqiifub .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uprzqiifub .gt_font_normal {
+  font-weight: normal;
+}
+
+#uprzqiifub .gt_font_bold {
+  font-weight: bold;
+}
+
+#uprzqiifub .gt_font_italic {
+  font-style: italic;
+}
+
+#uprzqiifub .gt_super {
+  font-size: 65%;
+}
+
+#uprzqiifub .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#uprzqiifub .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uprzqiifub .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uprzqiifub .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uprzqiifub .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uprzqiifub .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uprzqiifub .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#uprzqiifub .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#uprzqiifub div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" style="table-layout:fixed;width:0px;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <colgroup>
+    <col style="width:100px;"/>
+    <col style="width:100px;"/>
+    <col style="width:100px;"/>
+    <col style="width:100px;"/>
+    <col style="width:100px;"/>
+  </colgroup>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="background-color: #AB5F00; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="DXY">DXY</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #AB5F00; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="SP500">SP500</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #AB5F00; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="Nasdaq100">Nasdaq100</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="background-color: #AB5F00; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="IVV">IVV</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="background-color: #AB5F00; color: #FFFFFF; text-align: center; font-weight: bold;" scope="col" id="QQQ">QQQ</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="DXY" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; text-align: center; font-weight: bold;">108.04</td>
+<td headers="SP500" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; text-align: center; font-weight: bold;">6,026</td>
+<td headers="Nasdaq100" class="gt_row gt_center" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; text-align: center; font-weight: bold;">21,591</td>
+<td headers="IVV" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; text-align: center; font-weight: bold;">603.8</td>
+<td headers="QQQ" class="gt_row gt_right" style="border-left-width: 1px; border-left-style: dotted; border-left-color: #000000; border-right-width: 1px; border-right-style: dotted; border-right-color: #000000; border-top-width: 1px; border-top-style: dotted; border-top-color: #000000; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #000000; text-align: center; font-weight: bold;">522.92</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
