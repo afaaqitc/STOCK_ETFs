@@ -73,3 +73,7 @@ QQQ_top_gt
 main_vals
 ```
 
+```{r,out.width="15%",echo=FALSE,message=FALSE,warning=FALSE,fig.align='center'}
+knitr::include_graphics("/home/jdrk/Documents/GitHub/STOCK_ETFs/stock_etfs")
+```
+
