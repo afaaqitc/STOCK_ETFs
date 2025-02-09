@@ -73,7 +73,12 @@ QQQ_top_gt
 main_vals
 ```
 
+<center><font size="+2" color="white">-----------------------------------------------------------------------------</font></center>
+
+
+<center><font size="+1">**Report URL.**</font></center>
+
 ```{r,out.width="10%",echo=FALSE,message=FALSE,warning=FALSE,fig.align='center'}
-knitr::include_graphics("/home/jdrk/Documents/GitHub/STOCK_ETFs/stock_etfs")
+knitr::include_graphics("stock_etfs")
 ```
 
