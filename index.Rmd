@@ -82,3 +82,8 @@ main_vals
 knitr::include_graphics("stock_etfs")
 ```
 
+
+```{r,out.width="11%",fig.align='center',echo=FALSE,message=FALSE,warning=FALSE}
+knitr::include_graphics("/home/jdrk/Documents/GitHub/STOCK_ETFs/Untitled 1 (copy).png")
+```
+
